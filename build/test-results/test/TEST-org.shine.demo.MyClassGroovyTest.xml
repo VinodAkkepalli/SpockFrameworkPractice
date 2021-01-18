@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.shine.demo.MyClassGroovyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-01-18T15:02:22" hostname="SHINE-PC" time="0.126">
+  <properties/>
+  <testcase name="GetStr success case test" classname="org.shine.demo.MyClassGroovyTest" time="0.108"/>
+  <testcase name="GetStr failure case test" classname="org.shine.demo.MyClassGroovyTest" time="0.017"/>
+  <system-out><![CDATA[*****Running Groovy tests*****
+*****Running Groovy tests*****
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

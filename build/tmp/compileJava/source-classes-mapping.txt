@@ -1,0 +1,2 @@
+org/shine/demo/MyClass.java
+ org.shine.demo.MyClass
