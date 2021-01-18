@@ -1,2 +1,0 @@
-org/shine/demo/MyClassTest.java
- org.shine.demo.MyClassTest

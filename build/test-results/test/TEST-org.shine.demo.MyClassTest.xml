@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.shine.demo.MyClassTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-18T15:02:22" hostname="SHINE-PC" time="0.004">
-  <properties/>
-  <testcase name="testGetStr" classname="org.shine.demo.MyClassTest" time="0.004"/>
-  <system-out><![CDATA[*****Running Java tests*****
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
