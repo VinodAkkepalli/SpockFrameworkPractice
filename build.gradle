@@ -1,20 +1,57 @@
+//Using the plugins DSL
 plugins {
+    //Adds taks to build via plugins
+
     id 'java'
     id 'groovy'
+    //lombok plugin; need version because it is a community plugin
+    id "io.freefair.lombok" version "5.3.0"
 }
 
+//Java version settings for the project
+java {
+    sourceCompatibility = JavaVersion.VERSION_14
+    targetCompatibility = JavaVersion.VERSION_14
+}
+
+//Legacy way of applying plugins
+//apply plugin: "io.freefair.lombok"
+
 group 'org.example'
+
+//Version for the resultant jar/war
 version '1.0-SNAPSHOT'
 sourceCompatibility = '14'
 
 repositories {
     mavenCentral()
 }
+
+//In case we want to specify non stand source structure
+//These folders are searched for sources in addition to conventional places
 sourceSets {
     main {
         java {
-            srcDirs = ['src/main']
+            srcDir 'customSrc'
         }
+        groovy {
+//            srcDir 'xyz/src'
+        }
+        resources {
+//            srcDir 'some folder'
+        }
+    }
+
+    test {
+        /*java {
+            srcDir 'src/xyz'
+        }
+        groovy {
+            srcDir 'abc/dir'
+        }
+        resources {
+            srcDir 'some folder'
+        }*/
     }
 }
 dependencies {
@@ -26,4 +63,28 @@ dependencies {
             'org.spockframework:spock-core:1.0-groovy-2.4'
     )
 
+}
+
+task hello {
+    doFirst {
+        println "3: Three"
+    }
+
+    doLast {
+        println "4: Four"
+    }
+    println "1: I am first"
+}
+
+task world {
+    println "2: I am second"
+
+    dependsOn hello
+    doFirst {
+        println "5: Five"
+    }
+
+    doLast {
+        println "6: Six"
+    }
 }
